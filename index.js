@@ -1,4 +1,4 @@
-import { deterministicPartitionKey } from "./getDeterministicPartitionKey";
+import { deterministicPartitionKey } from "./dpk";
 
 // for testing purposes
 
