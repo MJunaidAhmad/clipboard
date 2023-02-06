@@ -49,7 +49,7 @@ Title: Modify getShiftsByFacility function
 Description: Modifiy the API call which is using the function above and add custom_agent_id in the response of the api.
 Write/Modifiy unit/http/integration tests accordingly.
 
-Task 5 (6 - 8 hours)
+Task 5 (6 - 8 hours )
 Title: Modify generateReport function
 Description: Modifiy the API call which is using function above and add custom_agent_id as an additional parameter if its not empty then fetch the agents data from the database and generate PDF report using this new id. (new id should be in the pdf report).
 Write/Modifiy unit/http/integration tests accordingly.

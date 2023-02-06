@@ -12,4 +12,4 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 First of all, I separated the logic based on the 4 use cases that we have in this function. Starting from the trivial case. Now developers can easily navigate through the code and understand all the cases. Secondly, I have extracted the common logic into a function which was utilized more than once. So we have a single source of truth. Also, in future if change is required in this logic so we have to do it only at one place.
 
-I have also installed babel to use the latest es6 import functionality. There were a lot of if else conditions in the code which were making it hard to read. I have tried to simplify it by using minimum if conditions with the combination of return statements. I wrote a total of 7 test cases and the code coverage is 100%.
+I have also installed babel to use the latest es6 import functionality. There were a lot of if else conditions in the code which were making it hard to read. I have tried to simplify it by using minimum if conditions with the combination of return statements. I wrote a total of 7 test cases and the code coverage is 100% (y).
