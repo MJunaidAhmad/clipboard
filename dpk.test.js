@@ -1,4 +1,4 @@
-import { deterministicPartitionKey } from "./getDeterministicPartitionKey";
+import { deterministicPartitionKey } from "./dpk";
 
 const TRIVIAL_PARTITION_KEY = "0";
 const MAX_PARTITION_KEY_LENGTH = 256;
