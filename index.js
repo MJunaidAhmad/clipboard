@@ -1,28 +1,20 @@
-const crypto = require("crypto");
+import { deterministicPartitionKey } from "./getDeterministicPartitionKey";
 
-exports.deterministicPartitionKey = (event) => {
-  const TRIVIAL_PARTITION_KEY = "0";
-  const MAX_PARTITION_KEY_LENGTH = 256;
-  let candidate;
+// for testing purposes
 
-  if (event) {
-    if (event.partitionKey) {
-      candidate = event.partitionKey;
-    } else {
-      const data = JSON.stringify(event);
-      candidate = crypto.createHash("sha3-512").update(data).digest("hex");
-    }
-  }
+//first base case
+console.log(deterministicPartitionKey());
 
-  if (candidate) {
-    if (typeof candidate !== "string") {
-      candidate = JSON.stringify(candidate);
-    }
-  } else {
-    candidate = TRIVIAL_PARTITION_KEY;
-  }
-  if (candidate.length > MAX_PARTITION_KEY_LENGTH) {
-    candidate = crypto.createHash("sha3-512").update(candidate).digest("hex");
-  }
-  return candidate;
-};
+// second case
+console.log(deterministicPartitionKey({ partitionKey: 123123 }));
+
+// third case
+console.log(deterministicPartitionKey({ partitionKey: "" }));
+
+// fourth case
+console.log(
+  deterministicPartitionKey({
+    partitionKey:
+      "b7478342a465088fc33d43a64cd370737e5a3bf6749ca62c1d6db341beb987326b4df3a9f54f67a2f0ee915d4216af2f382fda14dd58dc67794f745e92d7a7f6123b7478342a465088fc33d43a64cd370737e5a3bf6749ca62c1d6db341beb987326b4df3a9f54f67a2f0ee915d4216af2f382fda14dd58dc67794f745e92d7a7f6123",
+  })
+);
