@@ -1,0 +1,24 @@
+{
+  "name": "clipboard",
+  "version": "1.0.0",
+  "description": "A test task to refactor a function and add unit tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MJunaidAhmad/clipboard.git"
+  },
+  "author": "Junaid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MJunaidAhmad/clipboard/issues"
+  },
+  "homepage": "https://github.com/MJunaidAhmad/clipboard#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.4.1",
+    "jest": "^29.4.1"
+  }
+}
